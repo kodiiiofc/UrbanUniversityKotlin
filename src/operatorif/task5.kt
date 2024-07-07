@@ -8,10 +8,9 @@ fun main() {
 }
 
 fun grade(number: Int) : String {
-    try {
-        return grades.getValue(number)
-    }
-    catch (e: Exception) {
-        return "ошибка"
+    return if (number < 1 || number > 7) {
+        "ошибка"
+    } else {
+        grades.getValue(number)
     }
 }
