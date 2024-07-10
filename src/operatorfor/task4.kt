@@ -1,5 +1,10 @@
 package operatorfor
 
 fun main() {
-    for (i in 0..9) println(Math.pow(2.0,i.toDouble()).toInt())
+    for (i in 0..9) {
+        var n = 1;
+        repeat(i) {
+            n *= 2
+        }
+        println(n) }
 }
