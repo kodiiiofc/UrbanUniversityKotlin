@@ -4,6 +4,7 @@ fun main() {
     val matrix = arrayOf(
         arrayOf(4, 3, 13, 15, 33),
         arrayOf(2, 10, 6, 8, 72),
+        arrayOf(66, 45, 1, 4, 90),
         arrayOf(66, 45, 1, 4, 90)
     )
 
@@ -15,12 +16,27 @@ fun main() {
 
     println(matrix.contentDeepToString())
 
-    // находим медиану отсортированного списка из нечетного количества столбцов и строк (для четного количества НЕ справедливо)
+    print(matrix)
 
-    val sizeOfMatrix = matrix.size * matrix[0].size
-    var rowOfMedian = sizeOfMatrix / (2 * matrix[0].size)
-    var columnOfMedian = sizeOfMatrix / (2 * matrix.size)
-    val median = matrix[rowOfMedian][columnOfMedian]
+    // находим медиану отсортированного списка
+
+    val lastColumn = matrix[0].size - 1
+    val lastRow = matrix.size - 1
+    val median: Int
+
+    val firstRowIndexOfMedian: Int = lastRow / 2
+    val firstColumnIndexOfMedian: Int = lastColumn / 2
+
+    val secondRowIndexOfMedian: Int = if (lastRow % 2 != 0) firstRowIndexOfMedian + 1 else firstColumnIndexOfMedian
+    val secondColumnIndexOfMedian: Int = if (lastColumn % 2 != 0) firstColumnIndexOfMedian + 1 else firstColumnIndexOfMedian
+
+    val value1 = matrix[firstRowIndexOfMedian][firstColumnIndexOfMedian]
+    val value2 = matrix[firstRowIndexOfMedian][secondColumnIndexOfMedian]
+    val value3 = matrix[secondRowIndexOfMedian][firstColumnIndexOfMedian]
+    val value4 = matrix[secondRowIndexOfMedian][secondColumnIndexOfMedian]
+
+    median = (value1 + value2 + value3 + value4) / 4
+
 
     println(median)
 
@@ -45,4 +61,14 @@ fun toSort(matrix: Array<Array<Int>>) {
             }
         }
     }
+}
+
+
+fun print(matrix : Array<Array<Int>>) {
+    for (row in matrix) {
+        for (element in row)
+            print(" $element")
+        println()
+    }
+
 }
