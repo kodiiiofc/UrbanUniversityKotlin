@@ -17,6 +17,9 @@ fun main() {
 }
 
 fun findEvenNumbersInMatrix(matrix: Array<Array<Int>>) : ArrayList<Int> {
+
+    fun isEven(number: Int) = number % 2 == 0
+
     val arrayEven : ArrayList<Int> = ArrayList<Int>()
     for (i in matrix.indices) {
         for (j in matrix[0].indices) {
@@ -26,7 +29,6 @@ fun findEvenNumbersInMatrix(matrix: Array<Array<Int>>) : ArrayList<Int> {
     return arrayEven
 }
 
-fun isEven(number: Int) = number % 2 == 0
 
 
 
