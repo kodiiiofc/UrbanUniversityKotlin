@@ -1,7 +1,5 @@
 package dataclasses.task1
 
-import java.util.Dictionary
-
 val MOVIES = arrayOf("Головоломка", "Человек из стали", "Зеленая книга", "Дэдпул", "Поехавшая")
 val MOVIES_TIMES = mapOf(
     MOVIES[0] to arrayOf("10:00", "14:00", "20:00"),
