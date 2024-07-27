@@ -1,19 +1,28 @@
 package dataclasses.task1
 
+import java.util.Dictionary
+
+val MOVIES = arrayOf("Головоломка", "Человек из стали", "Зеленая книга", "Дэдпул", "Поехавшая")
+val MOVIES_TIMES = mapOf(
+    MOVIES[0] to arrayOf("10:00", "14:00", "20:00"),
+    MOVIES[1] to arrayOf("16:00", "20:00"),
+    MOVIES[2] to arrayOf("18:00", "20:00", "22:00"),
+    MOVIES[3] to arrayOf("20:00", "23:00"),
+    MOVIES[4] to arrayOf("10:00", "14:00", "18:00", "20:00", "22:30")
+)
+
 fun main() {
 
     val tickets = Tickets()
-    tickets.buyTicket("Головоломка", 5, 3, "16:00")
-    tickets.buyTicket("Головоломка", 6, 3, "16:00")
-    tickets.buyTicket("Головоломка", 3, 3, "16:00")
+    tickets.askForBuy()
+
+    tickets.showAllTickets(MOVIES[0])
 
     tickets.showAllTickets()
 
-    tickets.buyTicket("Головоломка", 3, 3, "16:00")
-    tickets.buyTicket("Головоломка", 3, 8, "16:00")
 
-    tickets.buyTicket("Человек из стали", 6, 15, "20:00")
 
-    tickets.showAllTickets()
-    tickets.showAllTickets("Человек из стали")
 }
+
+
+
