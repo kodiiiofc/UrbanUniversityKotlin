@@ -1,4 +1,4 @@
-package Innerclassesandinterfaces
+package innerclassesandinterfaces
 
 fun main() {
     var array = arrayOf("Иванов", "Петров", "Сидоров", "Процветов", "Протасов")

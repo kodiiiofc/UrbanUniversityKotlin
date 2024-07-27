@@ -1,4 +1,4 @@
-package Innerclassesandinterfaces
+package innerclassesandinterfaces
 
 fun main() {
     val array = arrayOf(0,1,2,3,5,6,8,0,72,0,3)

@@ -1,4 +1,4 @@
-package Innerclassesandinterfaces.task1
+package innerclassesandinterfaces.task1
 
 class Human(val name: String) {
 
