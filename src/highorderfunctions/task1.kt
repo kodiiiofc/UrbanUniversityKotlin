@@ -1,8 +1,8 @@
 package highorderfunctions
 
 fun main() {
-    val colorOne = "#0f0000"
-    val colorTwo = "#00000f"
+    val colorOne = "#0f0003"
+    val colorTwo = "#00003f"
 
     println(action(colorOne, colorTwo, ::colorMixer))
 
