@@ -5,7 +5,7 @@ fun main() {
 
     println(array.contentToString())
     println(action(array, ::addOne))
-    println(action(array, ::addOne))
+    println(action(array, ::doubleOf))
 
 }
 
