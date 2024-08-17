@@ -2,7 +2,7 @@ package filter
 
 fun main() {
 
-    val map = mapOf(
+    val prizeMap = mapOf(
         "103" to 50,
         "205" to 30,
         "206" to 10,
@@ -11,7 +11,7 @@ fun main() {
         "63" to 33,
     )
 
-    val filteredMap = map.filter { (key, value) -> key.endsWith('5') && value > 20 }
+    val filteredMap = prizeMap.filter { (key, value) -> key.endsWith('5') && value > 20 }
 
     println(filteredMap)
 }
