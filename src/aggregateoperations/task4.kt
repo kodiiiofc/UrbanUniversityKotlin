@@ -17,4 +17,13 @@ fun main() {
 
     // Разобрать задачу на вебинаре
 
+    /*
+    Вариант до которого я не додумался...
+
+        val result = fruits
+        .groupBy ({it[0].lowercase()})
+        .mapValues { it.value.filter { it.length % 2 == 0 } }
+
+     */
+
 }
