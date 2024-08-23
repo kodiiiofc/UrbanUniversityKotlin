@@ -2,7 +2,7 @@ package sorting
 
 fun main() {
     val matrix = arrayOf(
-        arrayOf(13, 13, 512, 63),
+        arrayOf(512, 13, 13, 63),
         arrayOf(450, 313, 55, 71),
         arrayOf(13, 336, 1, 32),
     )
@@ -25,7 +25,7 @@ fun main() {
 fun isSaw(array: Array<Int>): Boolean {
 
     for ((index, value) in array.withIndex()) {
-        array.forEachIndexed { i, v -> if (index != i && value == v) return false }
+        array.forEachIndexed { i, v -> if ((index == i + 1 || index == i - 1) && value == v) return false }
     }
 
     return true
