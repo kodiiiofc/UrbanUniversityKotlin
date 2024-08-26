@@ -50,6 +50,7 @@ suspend fun main() = coroutineScope {
         }
         PersonManager().readDataPersonList()
     }
+
     val cancelingJob = launch {
         println("Для завершения программы введите \"0\":")
         val answer = readln()
