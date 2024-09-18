@@ -63,7 +63,7 @@ fun getListOfPassword(input: Char, length: Int): List<String> {
 
 fun getListId(length: Int): List<String> {
     val list: MutableList<String> = mutableListOf()
-    for (i in 1..<length) {
+    for (i in 1..length) {
         list.add((1000000 + i).toString().removePrefix("1"))
     }
     return list
